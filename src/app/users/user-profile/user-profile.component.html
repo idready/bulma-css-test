@@ -1,0 +1,28 @@
+<div class="box user-profile" *ngIf="user else loading">
+    <a class="delete is-medium" [routerLink]="['/']" *ngIf="showDelete"></a>
+    <figure class="image is-128x128">
+        <img class="is-rounded" [src]="user.avatar" alt="{{user.firstName}} image">
+        <span class="status-info" [ngClass]="user.status"></span>
+    </figure>
+    <h3 class="has-text-centered is-size-6 is-capitalized has-text-weight-bold">{{user.firstName}} {{user.name}}</h3>
+    <p class="has-text-centered is-size-7 is-capitalized">{{user.address.city}}, {{user.address.country}}</p>
+    <div class="user-infos">
+        <p class="has-text-centered">
+            <span class="icon is-medium">
+                <i class="fas fa-book"></i>
+            </span>
+            <span>{{user.quotes.length}} Citation<span *ngIf="user.quotes.length">s</span></span>
+        </p>
+        <p class="has-text-centered">
+            <span class="icon is-medium">
+                <i class="fas fa-eye"></i>
+            </span>
+            <span>{{user.views}} Vue<span *ngIf="user.views">s</span></span>
+        </p>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="loading-user has-text-success">
+        <span class="fas fa-spinner fa-pulse fa-3x"></span>
+    </div>
+</ng-template>

@@ -1,0 +1,16 @@
+.main {
+
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    min-height: 100vh;
+
+    &-footer {
+        align-self: flex-end;
+    }
+
+    &-footer,
+    &-header {
+        flex: 1 0 100%;
+    }
+}

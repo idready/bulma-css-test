@@ -1,0 +1,26 @@
+<div class="box quote">
+    <p class="quote-content">{{quote.text}}</p>
+    <div class="level">
+        <div class="level-left">
+            <div class="level-item">
+                <p>{{formatDate(quote.date)}}</p>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <p>
+                    <span class="icon has-text-dark">
+                        <i class="fas fa-comment"></i>
+                    </span>
+                    <span>{{quote.comments.length}}</span>
+                </p>
+                <p>
+                    <span class="icon has-text-danger">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    <span>{{quote.likes}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

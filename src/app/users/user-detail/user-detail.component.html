@@ -1,0 +1,8 @@
+<div class="columns">
+    <div class="user-profile column is-offset-3 is-offset-4-desktop is-half is-one-third-desktop">
+        <app-user-profile [user]="user" [showDelete]="true"></app-user-profile>
+        <ng-container *ngFor="let quote of user.quotes">
+            <app-quote [quote]="quote"></app-quote>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/derived-variables';
+
+.profiles {
+    padding: 3rem 2rem;
+}
+
+.user-profile {
+
+    align-items: stretch;
+
+    .image {
+
+        margin: 0 auto;
+        position: relative;
+        transition: all 0.15s ease;
+
+        img {
+            border: 1px solid lighten($grey-light, 30%);
+        }
+    }
+
+    // States
+    &:hover {
+        .image {
+            transform: translateY(-5%);
+        }
+    }
+}
+
+.status-info {
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    display: block;
+    height: 1rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+    width: 1rem;
+    
+    &.offline {
+
+        background: $success;
+        border-color: darken($success, 10%);
+    }
+    &.online {
+
+        background: $grey-light;
+        border-color: darken($grey-light, 10%);
+    }
+}
+
+.user-infos {
+
+    .icon {
+        color: $info;
+    }
+}
+
+.loading-user {
+ 
+    display: block;
+    text-align: center;
+}

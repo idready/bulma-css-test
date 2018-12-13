@@ -1,0 +1,11 @@
+
+<section class="container">
+    <div class="columns profiles is-multiline">
+        <ng-container *ngFor="let user of users;index as i">
+            <!-- @TODO: i as index is just for mock, not a safe solution at all -->
+            <a [routerLink]="['/user-detail', i]" class="column is-full-mobile is-half-tablet is-one-third-widescreen is-one-quarter-fullhd">
+                <app-user-profile [user]="user"></app-user-profile>
+            </a>
+        </ng-container>
+    </div>
+</section>

@@ -1,7 +1,7 @@
 <div class="box user-profile" *ngIf="user else loading">
     <a class="delete is-medium" [routerLink]="['/']" *ngIf="showDelete"></a>
     <figure class="image is-128x128">
-        <img class="is-rounded" [src]="user.avatar" alt="{{user.firstName}} image">
+        <img class="is-rounded" [defaultImage]="defaultImage" [lazyLoad]="user.avatar" [offset]="offset" alt="{{user.firstName}} image">
         <span class="status-info" [ngClass]="user.status"></span>
     </figure>
     <h3 class="has-text-centered is-size-6 is-capitalized has-text-weight-bold">{{user.firstName}} {{user.name}}</h3>

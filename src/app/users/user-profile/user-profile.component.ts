@@ -8,6 +8,9 @@ import { User } from 'src/app/models/i-users.interface';
 })
 export class UserProfileComponent implements OnInit {
 
+    public defaultImage = 'https://www.placecage.com/128/128';
+    public offset = 100;
+
     @Input()
     public user: User;
 
